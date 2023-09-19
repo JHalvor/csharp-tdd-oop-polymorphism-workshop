@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using csharp.polymorphism.main.Examples.Shop;
 using csharp.polymorphism.main.Examples.Shop.Interfaces;
 
 namespace csharp.polymorphism.main.Examples.Shop
