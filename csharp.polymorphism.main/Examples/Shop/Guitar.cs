@@ -7,7 +7,7 @@ using csharp.polymorphism.main.Examples.Shop.Interfaces;
 
 namespace csharp.polymorphism.main.Examples.Shop
 {
-    public class Guitar : IProduct, IDiscountable
+    public class Guitar : IProduct, IDiscountable, IStringable
     {
         public int Id { get; set; }
 
@@ -15,5 +15,6 @@ namespace csharp.polymorphism.main.Examples.Shop
 
         public decimal Price { get; set; }
         public int Discount { get; set; }
+        public int NumberOfStrings { get; set; } = 6;
     }
 }

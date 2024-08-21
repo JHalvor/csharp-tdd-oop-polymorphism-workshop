@@ -17,7 +17,7 @@ namespace csharp.polymorphism.main.Examples.Shop
             _products.Add(product);
         }
 
-        public List<IProduct> GetProducts { get { return _products; } }
+        public List<IProduct> Products { get { return _products; } }
          public decimal BasketTotal { get { return _products.Sum(x => x.Price); } }
 
         public void DeleteProduct(int id)
