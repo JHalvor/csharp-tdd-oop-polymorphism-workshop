@@ -16,29 +16,28 @@ basket.AddProduct(product3);
 basket.AddProduct(product4);
 basket.AddProduct(product5);
 
-foreach(IProduct item in basket.Products)
+foreach(IProduct p in basket.Products)
 {
 
-    Console.WriteLine($"{item.Name} is a {item.GetType()}");
-    
-    if (item is IDiscountable)
+    Console.WriteLine($"{p.Name} is {p.GetType().Name}");
+
+    if (p is IDiscountable discountable)
     {
-        Console.WriteLine($"implements IDiscountable: Discount={(item as IDiscountable).Discount}");
+        //Console.WriteLine($"Implements IDiscountable - Discount={((IDiscountable)p).Discount}");
+        //Console.WriteLine($"Implements IDiscountable - Discount={(p as IDiscountable)?.Discount}");
+        Console.WriteLine($"Implements IDiscountable - Discount={discountable.Discount}");
 
     }
-    if (item is IStringable)
+    if (p is IStringable stringable)
     {
-        
-        Console.WriteLine($"implements IStringable: NumberOfStrings={(item as IStringable).NumberOfStrings}");
-        
-        //Console.WriteLine(((IStringable)item).NumberOfStrings); //casting is a bit more old school
-
+        Console.WriteLine($"Implements IStringable - Discount={stringable.NumberOfStrings}");
     }
+
     Console.WriteLine(new string('*', 10));
 }
 
 
-Console.WriteLine(new string('-', 10));
+Console.WriteLine(new string('-', 30));
 Console.WriteLine("Just IDiscountable");
 
 foreach (IDiscountable item in basket.Products.Where(x => x is IDiscountable))
