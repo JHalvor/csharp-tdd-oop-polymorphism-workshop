@@ -4,11 +4,11 @@ using workshop.console.Examples.Shop;
 
 Basket basket = new Basket();
 
-IProduct product1 = new Guitar() { Id=1, Name="Gibson SG", Price=1299.95M, Discount=15, NumberOfStrings=6 };
+IProduct product1 = new Guitar() { Id=1,   Name="Gibson SG", Price=1299.95M, Discount=15, NumberOfStrings=6 };
 IProduct product2 = new Guitar() { Id = 2, Name = "Fender Stratocaster", Price = 1299.95M, Discount = 10, NumberOfStrings=6 };
 IProduct product3 = new Guitar() { Id = 3, Name = "Fender D12 Dreadnought", Price = 1299.95M, Discount = 10, NumberOfStrings=12};
-IProduct product4 = new Drums() { Id = 4, Name = "Pearl Export", Price = 1100.99M };
-IProduct product5 = new Drums() { Id = 5, Name = "Pearl Export 2.0", Price = 1100.99M };
+IProduct product4 = new Drums() { Id = 4,  Name = "Pearl Export", Price = 1100.99M };
+IProduct product5 = new Drums() { Id = 5,  Name = "Pearl Export 2.0", Price = 1100.99M };
 
 basket.AddProduct(product1);
 basket.AddProduct(product2);
